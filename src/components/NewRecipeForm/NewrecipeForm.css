@@ -35,3 +35,11 @@ button:hover {
     background-color: #007bff; /* Hover durumunda arka plan rengini mavi yapar */
     border-color: #007bff; /* Hover durumunda kenarlık rengini mavi yapar */
 }
+.form .h5 {
+    font-size: 18px; /* Yazı boyutunu ayarlar */
+    font-weight: 600; /* Yazı kalınlığını ayarlar */
+    color: #333; /* Yazı rengini koyu gri yapar */
+    margin-bottom: 15px; /* Alt boşluk bırakır */
+    text-align: center; /* Yazıyı ortalar */
+}
+
