@@ -1,0 +1,22 @@
+.home {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.home h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-style: italic; /* Yazıyı italik yapar */
+    letter-spacing: 1px; /* Harfler arasında biraz boşluk bırakır */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Yazıya hafif bir gölge ekler */
+}
+
+.home p {
+    color: #555;
+    font-size: 16px;
+    font-style: italic; /* Yazıyı italik yapar */
+}
