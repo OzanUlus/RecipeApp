@@ -8,6 +8,7 @@
     margin: 10px; /* Kartlar arasında boşluk bırakır */
     padding: 15px; /* İçerik etrafında boşluk bırakır */
     text-align: center; /* İçerikleri ortalar */
+    
 }
 
 .recipeCard img {
