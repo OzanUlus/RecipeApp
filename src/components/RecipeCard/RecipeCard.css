@@ -1,0 +1,29 @@
+.recipeCard {
+    border: 1px solid #ddd; /* Hafif bir sınır rengi */
+    border-radius: 8px; /* Kenarları yuvarlatır */
+    overflow: hidden; /* İçerik taşmasını önler */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif bir gölge efekti */
+    background-color: #fff; /* Arka plan rengini beyaz yapar */
+    max-width: 300px; /* Kartın genişliğini sınırlandırır */
+    margin: 10px; /* Kartlar arasında boşluk bırakır */
+    padding: 15px; /* İçerik etrafında boşluk bırakır */
+    text-align: center; /* İçerikleri ortalar */
+}
+
+.recipeCard img {
+    width: 100%; /* Resmin kart genişliğine uyum sağlamasını sağlar */
+    height: 300px; /* Yüksekliği orantılı olarak ayarlar */
+    border-bottom: 1px solid #ddd; /* Resim ile açıklama arasında sınır çizer */
+}
+
+.recipeCard h3 {
+    font-size: 1.25rem; /* Başlık boyutunu ayarlar */
+    color: #333; /* Başlık rengini koyu gri yapar */
+    margin: 10px 0; /* Başlık etrafında boşluk bırakır */
+}
+
+.recipeCard p {
+    font-size: 1rem; /* Açıklama metni boyutunu ayarlar */
+    color: #666; /* Açıklama rengini daha açık gri yapar */
+    line-height: 1.5; /* Satır yüksekliğini artırarak okunabilirliği artırır */
+}

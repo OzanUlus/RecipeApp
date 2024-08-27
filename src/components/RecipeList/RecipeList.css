@@ -1,0 +1,15 @@
+.recipeList {
+    display: flex; /* Esnek kutu düzeni kullanır */
+    flex-wrap: wrap; /* Kartların birden fazla satıra yayılmasına izin verir */
+    justify-content: center; /* Kartları yatayda ortalar */
+    gap: 15px; /* Kartlar arasında boşluk bırakır */
+    padding: 20px; /* Üst, alt, sağ ve sol boşluk ekler */
+    background-color: #f9f9f9; /* Arka plan rengini açık gri yapar */
+}
+
+@media (max-width: 768px) {
+    .recipeList {
+        flex-direction: column; /* Ekran küçükse kartları dikey olarak hizalar */
+        align-items: center; /* Kartları dikeyde ortalar */
+    }
+}
