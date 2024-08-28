@@ -2,16 +2,11 @@ import React from 'react'
 import './RecipeCard.css'
 import axios from 'axios'
 
-export const RecipeCard = ({ image, title, description, id, deleteRecipe  } ) => {
+export const RecipeCard = ({ image, title, description, id, onDelete  } ) => {
 
   const handleDelete = async (id) => {
  
-    try {
-      await axios.delete(`http://localhost:3001/recipes/${id}`);
-      console.log("Recipe deleted succesfully")
-     } catch (error) {
-      console.log("There was an error while deleting")
-     }
+     onDelete(id)
   }
   return (
     <div className='recipeCard'>
