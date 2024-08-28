@@ -1,21 +1,26 @@
 import React, { useState } from 'react'
 import './NewRecipeForm.css'
 
-export const NewRecipeForm = () => {
+export const NewRecipeForm = ({addRecipe}) => {
   const[title,setTitle] = useState("")
   const[image, setImage] = useState("")
   const[description, setDescription] = useState("")
 
-  const handleSubmit = (event) => {
+  const handleSubmit =  (event) => {
 
     event.preventDefault()
+     
+    const newRecipe = {title,image,description}
 
-    console.log("Submiting new recipe", {title,description,image})
+    
+       addRecipe(newRecipe);
+      setDescription("")
+      setImage("")
+      setTitle("")
+      
 
-    setDescription("")
-    setImage("")
-    setTitle("")
   }
+  
 
   return (
     <form onSubmit={handleSubmit}>

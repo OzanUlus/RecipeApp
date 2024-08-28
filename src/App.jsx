@@ -18,18 +18,20 @@ function App() {
     .catch(error => {
         console.log("Thre was an error while fetching the data" , error)
     } )
-    
-   
-    
  },[])
-  
 
+ const handleAddRecipe = async (newRecipe) => {
+     const response = await axios.post("http://localhost:3001/recipes",newRecipe)
+    setRecipe([...recipes, response.data])
+ } 
+  
+   
 
   return (
     <>
       <Header />
       <Home />
-      <NewRecipeForm />
+      <NewRecipeForm addRecipe ={handleAddRecipe} />
       <RecipeList recipes={recipes} />
     </>
   )
