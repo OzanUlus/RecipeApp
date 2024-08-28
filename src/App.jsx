@@ -20,18 +20,21 @@ function App() {
     } )
  },[])
 
- const handleAddRecipe = async (newRecipe) => {
-     const response = await axios.post("http://localhost:3001/recipes",newRecipe)
-    setRecipe([...recipes, response.data])
- } 
-  
-   
+ const addRecipe = async (newRecipe) => {
+    try {
+        const response = await axios.post("http://localhost:3001/recipes", newRecipe);
+        setRecipe((prevRecipes) => [...prevRecipes, response.data]);
+    } catch (error) {
+        console.error("Tarif eklenirken bir hata oluştu:", error);
+    } 
+};
+ 
 
   return (
     <>
       <Header />
       <Home />
-      <NewRecipeForm addRecipe ={handleAddRecipe} />
+      <NewRecipeForm addRecipe ={addRecipe} />
       <RecipeList recipes={recipes} />
     </>
   )

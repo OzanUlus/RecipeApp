@@ -8,9 +8,8 @@ export const RecipeList = ({recipes}) => {
     {recipes.map((recipe) => (
       <RecipeCard 
         key={recipe.id}
-        imageUrl={recipe.image}
-        name={recipe.title}
-        description={recipe.description}
+        {...recipe}
+        deleteRecipe
       />
     ))}
   </div>

@@ -28,3 +28,36 @@
     color: #666; /* Açıklama rengini daha açık gri yapar */
     line-height: 1.5; /* Satır yüksekliğini artırarak okunabilirliği artırır */
 }
+.recipeCard button {
+    border: 2px solid;
+    color: gray;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    margin: 5px 30px;
+    border-radius: 4px;
+    background: transparent;
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    
+  }
+  
+  .recipeCard button.update {
+    
+    border-color: orange;
+    color: orange;
+  }
+  
+  .recipeCard button.update:hover {
+    background-color: orange;
+    color: white;
+  }
+  
+  .recipeCard button.delete {
+    border-color: #dc3545;
+    color: #dc3545;
+  }
+  
+  .recipeCard button.delete:hover {
+    background-color: #dc3545;
+    color: white;
+  }
