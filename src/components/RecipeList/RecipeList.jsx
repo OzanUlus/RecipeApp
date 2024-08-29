@@ -2,7 +2,7 @@ import React from 'react'
 import "./RecipeList.css"
 import RecipeCard from '../RecipeCard/RecipeCard'
 
-export const RecipeList = ({recipes, onDelete}) => {
+export const RecipeList = ({recipes, onDelete,onEdit}) => {
   return (
     <div className='recipeList'>
     {recipes.map((recipe) => (
@@ -10,6 +10,7 @@ export const RecipeList = ({recipes, onDelete}) => {
         key={recipe.id}
         {...recipe}
         onDelete = {onDelete}
+        onEdit={onEdit}
       />
     ))}
   </div>

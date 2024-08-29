@@ -40,6 +40,14 @@ const deleteRecipe = async (id) =>{
        }
        setRecipe(recipes => recipes.filter(recipe => recipe.id !== id))
 }
+
+const updateRecipe = async (id,{title,description,image}) =>{
+  try {
+       await axios.put(`http://localhost:3001/recipes/${id}`,{title,description,image})
+  } catch (error) {
+     console.log("There was an error while editing.",error)
+  }
+}
  
 
   return (
@@ -47,7 +55,7 @@ const deleteRecipe = async (id) =>{
       <Header />
       <Home />
       <NewRecipeForm addRecipe ={addRecipe}  />
-      <RecipeList recipes={recipes} onDelete ={deleteRecipe}/>
+      <RecipeList recipes={recipes} onDelete ={deleteRecipe} onEdit={updateRecipe}/>
     </>
   )
 }
