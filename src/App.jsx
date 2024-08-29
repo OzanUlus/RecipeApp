@@ -43,7 +43,8 @@ const deleteRecipe = async (id) =>{
 
 const updateRecipe = async (id,{title,description,image}) =>{
   try {
-       await axios.put(`http://localhost:3001/recipes/${id}`,{title,description,image})
+     const response =  await axios.put(`http://localhost:3001/recipes/${id}`,{title,description,image})
+     .then(res =>setRecipe((prevRecipes) => [...prevRecipes , res.data]))
   } catch (error) {
      console.log("There was an error while editing.",error)
   }
