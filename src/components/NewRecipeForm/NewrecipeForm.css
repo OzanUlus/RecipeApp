@@ -42,4 +42,10 @@ button:hover {
     margin-bottom: 15px; /* Alt boşluk bırakır */
     text-align: center; /* Yazıyı ortalar */
 }
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  
 

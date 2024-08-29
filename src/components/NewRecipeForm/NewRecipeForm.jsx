@@ -33,7 +33,12 @@ export const NewRecipeForm = ({addRecipe}) => {
 
      setErrors(newErrors)
      return valid
-  }
+  } 
+
+  const handleInputChange = (setter, value) => {
+    setter(value);
+    validateForm();  // Her input değişiminde formu kontrol et
+  };
 
   const handleSubmit = async (event) => {
 
@@ -54,23 +59,32 @@ export const NewRecipeForm = ({addRecipe}) => {
 
   return (
     <form onSubmit={handleSubmit}>
-        <h5>Tarif Ekleme</h5>
-        <input type='text' 
-        value={title} 
-        onChange={(event) => setTitle(event.target.value)} placeholder='Tarif Adı'  />
-        {errors.title && <span className="error">{errors.title}</span>}
-        <input type='text'
-         value={image} 
-         onChange={(event) => setImage(event.target.value)} placeholder='Görsel Url' />
-         {errors.title && <span className="error">{errors.image}</span>}
-        <textarea 
-        type='text' 
-        value={description} 
-        onChange={(event) => setDescription(event.target.value)} placeholder='Açıklama' rows={3} />
-        {errors.title && <span className="error">{errors.description}</span>}
-        <button type='submit' >Kaydet</button>
+      <h5>Tarif Ekleme</h5>
+      <input
+        type="text"
+        value={title}
+        onChange={(event) => handleInputChange(setTitle, event.target.value)}
+        placeholder="Tarif Adı"
+      />
+      {errors.title && <span className="error">{errors.title}</span>}
+      <input
+        type="text"
+        value={image}
+        onChange={(event) => handleInputChange(setImage, event.target.value)}
+        placeholder="Görsel Url"
+      />
+      {errors.image && <span className="error">{errors.image}</span>}
+      <textarea
+        value={description}
+        onChange={(event) => handleInputChange(setDescription, event.target.value)}
+        placeholder="Açıklama"
+        rows={3}
+      />
+      {errors.description && <span className="error">{errors.description}</span>}
+      <button type="submit">Kaydet</button>
     </form>
-  )
-}
+  );
+};
+
 
 export default NewRecipeForm
