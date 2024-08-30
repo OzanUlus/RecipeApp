@@ -1,12 +1,11 @@
-import { useEffect, useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useContext, useEffect, useState } from 'react'
 import './App.css'
 import { Header } from './components/Header/Header'
 import Home from './components/Home/Home'
 import { RecipeList } from './components/RecipeList/RecipeList'
 import { NewRecipeForm } from './components/NewRecipeForm/NewRecipeForm'
 import axios from 'axios'
+import { UserPreferenceContext } from './context/UserPreferenceContext'
 
 function App() {
  const [recipes,setRecipe] = useState([])
@@ -49,15 +48,15 @@ const updateRecipe = async (id,{title,description,image}) =>{
      console.log("There was an error while editing.",error)
   }
 }
- 
+  const {theme} = useContext(UserPreferenceContext)
 
   return (
-    <>
+    <div className={`App ${theme}`} >
       <Header />
       <Home />
       <NewRecipeForm addRecipe ={addRecipe}  />
       <RecipeList recipes={recipes} onDelete ={deleteRecipe} onEdit={updateRecipe}/>
-    </>
+    </div>
   )
 }
 
