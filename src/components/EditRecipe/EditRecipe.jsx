@@ -1,18 +1,22 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { ApiContext } from '../../context/ApiContext';
 
 
-export const EditRecipe = ({ id, image, title, description, onEdit, onCancel }) => {
+export const EditRecipe = ({ id, image, title, description, onCancel}) => {
     const [updatedTitle, setUpdatedTitle] = useState(title);
     const [updatedImage, setUpdatedImage] = useState(image);
     const [updatedDescription, setUpdatedDescription] = useState(description);
+    const { updateRecipe } = useContext(ApiContext)
+    
 
     const handleUpdate = async (e) => {
         e.preventDefault();
-        await onEdit(id, {
+        await updateRecipe(id, {
             title: updatedTitle,
             image: updatedImage,
             description: updatedDescription,
         });
+        onCancel;
     };
 
     return (
@@ -33,7 +37,7 @@ export const EditRecipe = ({ id, image, title, description, onEdit, onCancel }) 
                     onChange={(e) => setUpdatedImage(e.target.value)}
                 />
                 <button type="submit">Güncelle</button>
-                <button type="button" onClick={onCancel}>İptal</button>
+                <button type="button" onClick={onCancel}>Kapat</button>
             </form>
         </div>
     );

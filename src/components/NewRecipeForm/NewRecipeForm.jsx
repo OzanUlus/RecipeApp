@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './NewRecipeForm.css'
+import { ApiContext } from '../../context/ApiContext';
 
-export const NewRecipeForm = ({addRecipe}) => {
+export const NewRecipeForm = () => {
   const[title,setTitle] = useState("")
   const[image, setImage] = useState("")
   const[description, setDescription] = useState("")
@@ -11,6 +12,8 @@ export const NewRecipeForm = ({addRecipe}) => {
     image : "",
     description : ""
   })
+
+  const {addRecipe} = useContext(ApiContext)
 
   const validateForm  = () => {
      let valid = true

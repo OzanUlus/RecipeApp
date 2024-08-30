@@ -1,14 +1,17 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './RecipeCard.css'
 import axios from 'axios'
 import { EditRecipe } from '../EditRecipe/EditRecipe';
+import { ApiContext } from '../../context/ApiContext';
 
 
-export const RecipeCard = ({ image, title, description, id, onDelete, onEdit  } ) => {
+export const RecipeCard = ({ image, title, description, id } ) => {
   const [isEdit, setIsEdit] = useState(false)
+  const {deleteRecipe} = useContext(ApiContext)
+  
   const handleDelete = async (id) => {
  
-     onDelete(id)
+     deleteRecipe(id)
   }
   
   const startUpdate = () => {
@@ -24,7 +27,6 @@ export const RecipeCard = ({ image, title, description, id, onDelete, onEdit  } 
                   image={image}
                   title={title}
                   description={description}
-                  onEdit={onEdit}
                   onCancel={() => setIsEdit(false)} // Düzenleme işlemi iptal edildiğinde düzenleme modunu kapatır.
               />
           ) : (

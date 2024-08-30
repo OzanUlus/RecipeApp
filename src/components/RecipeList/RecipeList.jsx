@@ -1,16 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./RecipeList.css"
 import RecipeCard from '../RecipeCard/RecipeCard'
+import { ApiContext } from '../../context/ApiContext'
 
-export const RecipeList = ({recipes, onDelete,onEdit}) => {
+export const RecipeList = () => {
+  const{recipes} = useContext(ApiContext)
   return (
     <div className='recipeList'>
-    {recipes.map((recipe) => (
+    {recipes.map((recipe, index) => (
       <RecipeCard 
-        key={recipe.id}
+        key={index}
         {...recipe}
-        onDelete = {onDelete}
-        onEdit={onEdit}
       />
     ))}
   </div>
