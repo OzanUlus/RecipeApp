@@ -1,9 +1,9 @@
 .recipeCard {
-    border: 1px solid #ddd; /* Hafif bir sınır rengi */
+    border: 1px solid #b33939; /* Hafif bir sınır rengi */
     border-radius: 8px; /* Kenarları yuvarlatır */
     overflow: hidden; /* İçerik taşmasını önler */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif bir gölge efekti */
-    background-color: #fff; /* Arka plan rengini beyaz yapar */
+    background-color: #84817a; /* Arka plan rengini beyaz yapar */
     max-width: 300px; /* Kartın genişliğini sınırlandırır */
     margin: 10px; /* Kartlar arasında boşluk bırakır */
     padding: 15px; /* İçerik etrafında boşluk bırakır */
@@ -25,7 +25,7 @@
 
 .recipeCard p {
     font-size: 1rem; /* Açıklama metni boyutunu ayarlar */
-    color: #666; /* Açıklama rengini daha açık gri yapar */
+    color: #f7f1e3; /* Açıklama rengini daha açık gri yapar */
     line-height: 1.5; /* Satır yüksekliğini artırarak okunabilirliği artırır */
 }
 .recipeCard button {

@@ -6,7 +6,9 @@
     margin: 5px auto;
     gap: 15px; /* Kartlar arasında boşluk bırakır */
     padding: 20px; /* Üst, alt, sağ ve sol boşluk ekler */
-    background-color: #f9f9f9; /* Arka plan rengini açık gri yapar */
+    background-color: #ffb142; /* Arka plan rengini açık gri yapar */
+    border: 3px solid #b33939;
+    border-radius: 8px;
     
 }
 

@@ -15,6 +15,7 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 80px;
+    border-radius: 10px;
 }
 
 .navbar .logo a {

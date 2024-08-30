@@ -6,7 +6,7 @@ form {
     max-width: 600px; /* Formun maksimum genişliğini ayarlar */
     margin: 15px auto; /* Formu yatayda ortalar */
     padding: 20px; /* Formun etrafına iç boşluk ekler */
-    background-color: #fff; /* Formun arka plan rengini beyaz yapar */
+    background-color: #ffb142; /* Formun arka plan rengini beyaz yapar */
     border-radius: 8px; /* Formun köşelerini yuvarlatır */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif bir gölge ekler */
 }
@@ -17,14 +17,21 @@ input, textarea {
     border: 1px solid #ccc; /* Kenarlık rengi ve kalınlığı */
     border-radius: 4px; /* Kenarları yuvarlatır */
     font-size: 16px; /* Yazı boyutunu ayarlar */
+    background-color: #84817a;
+    color: whitesmoke;
+}
+input::placeholder,
+textarea::placeholder {
+    color: whitesmoke; /* Placeholder rengini beyaz olarak ayarlar */
+    opacity: 1; /* Placeholder renginin opaklığını ayarlar */
 }
 
 button {
     padding: 10px 20px; /* İç boşluk ayarlar */
-    border: 2px solid #007bff; /* Kenarlık rengi ve kalınlığı */
+    border: 2px solid #218c74; /* Kenarlık rengi ve kalınlığı */
     border-radius: 4px; /* Kenarları yuvarlatır */
     background-color: transparent; /* Arka plan rengini şeffaf yapar */
-    color: #007bff; /* Yazı rengini mavi yapar */
+    color: whitesmoke; /* Yazı rengini mavi yapar */
     font-size: 16px; /* Yazı boyutunu ayarlar */
     cursor: pointer; /* İmleci butona tıklanabilir hale getirir */
     transition: color 0.3s, border-color 0.3s; /* Renk ve kenarlık geçişi animasyonu */
@@ -32,8 +39,8 @@ button {
 
 button:hover {
     color: #fff; /* Hover durumunda yazı rengini beyaz yapar */
-    background-color: #007bff; /* Hover durumunda arka plan rengini mavi yapar */
-    border-color: #007bff; /* Hover durumunda kenarlık rengini mavi yapar */
+    background-color:#218c74; /* Hover durumunda arka plan rengini mavi yapar */
+    border-color: #218c74; /* Hover durumunda kenarlık rengini mavi yapar */
 }
 .form .h5 {
     font-size: 18px; /* Yazı boyutunu ayarlar */

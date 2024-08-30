@@ -1,10 +1,11 @@
 .home {
-    background-color: #f4f4f4;
+    background-color: #ffb142;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
     margin: 20px 0;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
 }
 
 .home h3 {
