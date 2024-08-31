@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Header.css"
+import { Link } from 'react-router-dom';
 
 export const Header = () => {
   return (
@@ -9,10 +10,10 @@ export const Header = () => {
                 <a href="#">RecipeApp</a>
             </div>
             <ul className="nav-links">
-                <li><a href="#">Anasayfa</a></li>
-                <li><a href="#">Hakkımızda</a></li>
-                <li><a href="#">Hizmetler</a></li>
-                <li><a href="#">İletişim</a></li>
+                <li><Link to='/' >Anasayfa</Link></li>
+                <li><Link  to='/about'>Hakımızda</Link></li>
+                <li><Link  to='/addRecipe'>Tarif Ekle</Link></li>
+                <li><Link >Profil</Link></li>
             </ul>
         </nav>
     

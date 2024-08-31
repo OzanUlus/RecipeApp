@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import './NewRecipeForm.css'
 import { ApiContext } from '../../context/ApiContext';
+import RecipeList from '../RecipeList/RecipeList';
 
 export const NewRecipeForm = () => {
   const[title,setTitle] = useState("")
@@ -61,7 +62,9 @@ export const NewRecipeForm = () => {
   
 
   return (
-    <form onSubmit={handleSubmit}>
+
+    <>
+      <form onSubmit={handleSubmit}>
       <h5>Tarif Ekleme</h5>
       <input
         type="text"
@@ -86,6 +89,10 @@ export const NewRecipeForm = () => {
       {errors.description && <span className="error">{errors.description}</span>}
       <button type="submit">Kaydet</button>
     </form>
+    <RecipeList />
+    </>
+    
+    
   );
 };
 
