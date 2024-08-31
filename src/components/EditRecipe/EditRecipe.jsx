@@ -16,7 +16,7 @@ export const EditRecipe = ({ id, image, title, description, onCancel}) => {
             image: updatedImage,
             description: updatedDescription,
         });
-        onCancel;
+        
     };
 
     return (
