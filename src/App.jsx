@@ -7,6 +7,7 @@ import { UserPreferenceContext } from './context/UserPreferenceContext'
 import ApiContextProvider from './context/ApiContext'
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import { About } from './components/About/About'
+import Login from './components/Login/Login'
 
 function App() {
  
@@ -22,6 +23,7 @@ function App() {
           <Route path='/' element ={<Home />} />
           <Route path='/about' element ={<About  />} />
           <Route path='/addRecipe' element ={<NewRecipeForm  />} />
+          <Route path='/login' element ={<Login />} />
          </Routes>
         
        </div>

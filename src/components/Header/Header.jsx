@@ -14,6 +14,7 @@ export const Header = () => {
                 <li><Link  to='/about'>Hakımızda</Link></li>
                 <li><Link  to='/addRecipe'>Tarif Ekle</Link></li>
                 <li><Link >Profil</Link></li>
+                <li><Link  to='/login'>Giriş Yap</Link></li>
             </ul>
         </nav>
     
