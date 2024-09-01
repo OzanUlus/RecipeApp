@@ -7,7 +7,9 @@ import { UserPreferenceContext } from './context/UserPreferenceContext'
 import ApiContextProvider from './context/ApiContext'
 import {BrowserRouter as Router,Routes,Route} from 'react-router-dom'
 import { About } from './components/About/About'
+import Profile from './components/Profile/Profile'
 import Login from './components/Login/Login'
+import PrivateRoute from './services/PrivateRoute'
 
 
 function App() {
@@ -25,7 +27,7 @@ function App() {
           <Route path='/about' element ={<About  />} />
           <Route path='/addRecipe' element ={<NewRecipeForm  />} />
           <Route path='/addRecipe' element ={<NewRecipeForm  />} />
-          
+          <Route path='/profile' element ={<PrivateRoute element={<Profile  />}/>} />
           <Route path='/login' element ={<Login />} />
          </Routes>
         

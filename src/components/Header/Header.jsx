@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./Header.css"
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthContext';
 
 export const Header = () => {
+
+    const{isAuthenticated, logout} = useContext(AuthContext)
+    const navigate = useNavigate()
+
+    const handleLogin = () => {
+        navigate('/login')
+      }
+    
+      const handleLogout = () => {
+        logout()
+        navigate('/login')
+      }
+
   return (
     
          <nav className="navbar">
@@ -13,8 +27,8 @@ export const Header = () => {
                 <li><Link to='/' >Anasayfa</Link></li>
                 <li><Link  to='/about'>Hakımızda</Link></li>
                 <li><Link  to='/addRecipe'>Tarif Ekle</Link></li>
-                <li><Link >Profil</Link></li>
-                <li><Link  to='/login'>Giriş Yap</Link></li>
+                <li><Link  to='/profile'>Profil</Link></li>
+                <button onClick={isAuthenticated ? handleLogout : handleLogin}>{isAuthenticated ? "Çıkış Yap" : "Giriş Yap"}</button>
             </ul>
         </nav>
     
